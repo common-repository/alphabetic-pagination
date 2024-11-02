@@ -1,13 +1,14 @@
 ﻿=== Alphabetic Pagination ===
-Contributors: fahadmahmood, sommepro
-Tags: pagination, alphabetic, filtering, sorting, posts pagination, chameleon
+Contributors: fahadmahmood, invoicepress
+Tags: pagination, alphabetic, filtering, sorting, posts pagination
 Requires at least: 3.0
-Tested up to: 6.4
-Stable tag: 3.2.0
+Tested up to: 6.6
+Stable tag: 3.2.1
 Requires PHP: 7.0
 License: GPL2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Alphabetic pagination is a great plugin to filter your posts/pages and WooCommerce products with alphabets. It is simple to use and easy to understand for customization.
+
+Alphabetic Pagination allows you to enable pagination on pages, posts, categories and WooCommerce shop page.
 
 
 == Description ==
@@ -22,10 +23,7 @@ Alphabetic pagination is a great plugin to filter your posts/pages and WooCommer
 
 * License: GPL 3. See License below for copyright jots and titles.
 
-
-
-
-Alphabetic Pagination allows you to enable pagination on pages, posts and categories. By default it works with categories to filter posts inside with the selection from the settings page. You can enable it for other sections as well. 
+Alphabetic pagination is a great plugin to filter your posts/pages and WooCommerce products with alphabets. It is simple to use and easy to understand for customization. Alphabetic Pagination allows you to enable pagination on pages, posts and categories. By default it works with categories to filter posts inside with the selection from the settings page. You can enable it for other sections as well. 
 Options are availble to select auto/custom implementation, where to display post type/status selection and DOM position. You can activate another amazing plugin Chameleon to apply styles on pagination. Pagination can be enabled for selected pages/posts/taxonomies with additional shortcodes. Custom implementation, shortcodes and permissions are available in advanced version. Templates are avarialble with another WordPress plugin Chameleon to shape your page with different style. You can display pagination on archives, categories, shops, portfolio, or selected post/page/product/category etc.
 
 
@@ -111,6 +109,9 @@ Method-B:
 [Quick Start]: <http://androidbubble.com/blog/wordpress/plugins/alphabetic-pagination>
 
 == Changelog ==
+= 3.2.1 =
+* Fix: Shortcode improved for elementor. [Thanks to Daniel El Khal / Fosetico Enterprises Ltd][25/06/2024]
+* Fix: property_exists function used to avoid the undefined property WP_Error. [Thanks to Richard Scheib][30/10/2024]
 = 3.2.0 =
 * Updated for custom implementation with the category_ids and the taxonomy attribute through the shortcodes. [Thanks to Chandni Rasotra][11/03/2024]
 = 3.1.9 =
@@ -371,6 +372,8 @@ Few bugs are fixed.
 * Default settings are implemented for uppercase and horizontal layout.
 
 == Upgrade Notice ==
+= 3.2.1 =
+Fix: Shortcode improved for elementor.
 = 3.2.0 =
 Updated for custom implementation with the category_ids and the taxonomy attribute through the shortcodes.
 = 3.1.9 =

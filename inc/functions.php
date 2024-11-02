@@ -1069,7 +1069,7 @@
 					//
 					//pree($category);
 					//pree($allowed_taxes);
-					if(!empty($category) && !in_array($category->taxonomy, $allowed_taxes) && ap_has_term($category->taxonomy)){
+					if(!empty($category) && property_exists($category, 'taxonomy') && !in_array($category->taxonomy, $allowed_taxes) && ap_has_term($category->taxonomy)){
 						$allowed_taxes[] = $category->taxonomy;
 					}
 					//pree($ap_tax_types_get);
@@ -1404,18 +1404,22 @@
 		function set_ap_query_n($n){
 			global $ap_query;
 			$ap_query = $n;
+			
+			pre('$ap_query = '.$ap_query);
 		}
 	}		
 	
 	if(!function_exists('ap_pagination')){
 		function ap_pagination($query){
 
-
+			pre('ap_pagination($query)');
 			
 			if(!is_admin()){
 
 				global $ap_customp, $ap_implementation, $wpdb;
-				//pree($query->is_main_query());
+				
+				pre('$query->is_main_query(): '.$query->is_main_query());
+				
 				//pree($ap_customp.' | '.$ap_implementation);
 				if($query->is_main_query() && $ap_implementation=='auto'){
 					
@@ -1437,7 +1441,9 @@
 
 			//pree($where);
 			$where = ap_where_clause($where);
-			//pree($where);
+			
+			pre($where);
+			
 			return $where;
 
 		}
@@ -1929,6 +1935,7 @@
 
 	
 	function ap_set_query_order( $query ) {
+		//pree($query);
 		if ( $query->is_category() && $query->is_main_query()) {
 
 			$category = get_queried_object();

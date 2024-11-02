@@ -3,7 +3,7 @@
 Plugin Name: Alphabetic Pagination
 Plugin URI: http://androidbubble.com/blog/wordpress/plugins/alphabetic-pagination
 Description: Alphabetic pagination is a great plugin to filter your posts/pages and WooCommerce products with alphabets. It is compatible with custom taxonomies.
-Version: 3.2.0
+Version: 3.2.1
 Author: Fahad Mahmood 
 Author URI: https://www.androidbubbles.com
 Text Domain: alphabetic-pagination
